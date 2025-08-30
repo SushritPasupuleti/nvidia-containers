@@ -5,10 +5,10 @@ FROM nvcr.io/nvidia/pytorch:22.07-py3
 WORKDIR /workspace
 
 # Install any additional Python packages if needed
-# RUN pip install -r requirements.txt
+# Setup your tooling like Poetry, pipenv, etc.
 
-COPY gpu_test.py .
+COPY torch_test.py .
 
 # Set default command to run the test
-CMD ["python", "gpu_test.py"]
+CMD ["python", "torch_test.py"]
 

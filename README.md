@@ -2,6 +2,10 @@
 
 Running Containers with GPU Passthrough for ML/AI workloads.
 
+What's here?
+
+- `Dockerfiles` to test for GPU support with PyTorch and HuggingFace Transformers.
+
 > Most commands used are setup in the [Makefile](./Makefile) for convenience.
 
 ## Prerequisites

@@ -21,3 +21,12 @@ docker-run-transformers:
 
 docker-run-transformers-nix-os:
 	@docker run --rm --device nvidia.com/gpu=all -it gpu-test-transformers
+
+docker-build-test-custom:
+	@docker build -t gpu-test-custom -f customNvidia.Dockerfile .
+
+docker-run-custom:
+	@docker run --rm --runtime=nvidia --gpus all -it gpu-test-custom
+
+docker-run-custom-nix-os:
+	@docker run --rm --device nvidia.com/gpu=all -it gpu-test-custom

@@ -50,3 +50,14 @@ You should see output indicating that PyTorch is using the GPU.
 CUDA Available: True
 Device: NVIDIA GeForce GTX 1080 Ti
 ```
+
+## Images available
+
+- [`Dockerfile`](./Dockerfile): Basic image with PyTorch using NVIDIA's CUDA base image.
+- [`transformers.Dockerfile`](./transformers.Dockerfile): Extends the basic image to include HuggingFace Transformers
+- [`customNvidia.Dockerfile`](./customNvidia.Dockerfile): Custom image with specific versions of CUDA. Uses Ubuntu as base image.
+
+Test scripts are included in the images to verify GPU access.
+
+- `test_pytorch.py`: Checks if PyTorch can access the GPU.
+- `test_transformers.py`: Checks if HuggingFace Transformers can access the GPU.

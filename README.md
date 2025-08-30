@@ -31,3 +31,18 @@ sudo docker run --rm --device nvidia.com/gpu=all ubuntu nvidia-smi
 ```
 
 If you see the same table as before, you're all set!
+
+## Running Container to Check PyTorch with GPU
+
+You can use the provided `Makefile` to run a container that checks if PyTorch can access the GPU.
+
+```bash
+make docker-run # or make docker-run-nix for NixOS users
+```
+
+You should see output indicating that PyTorch is using the GPU.
+
+```
+CUDA Available: True
+Device: NVIDIA GeForce GTX 1080 Ti
+```
